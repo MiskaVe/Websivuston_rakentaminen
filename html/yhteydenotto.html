@@ -1,44 +1,39 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yhteydenotto-sivu</title>
-    <link rel="stylesheet" href="..\css\lomake.css">
+
+    <link rel="stylesheet" href="/css/index.css">
+
+    <title>Miskan rakentama verkkosivu</title>
 </head>
+
 <body>
-    <header>
-        <img id="logo" src="../img/logo.png" alt="Kaupan logo">
-            <nav>
-                <a class="linkki" id="etusivu" href="../index.php">Etusivu</a>
-                <a class="linkki" id="tietoa" href="./tietoa.html">Tietoa meistä</a>
-                <a class="linkki" id="yhteys" href="./yhteydenotto.html">Yhteydenotto</a> 
-            </nav>
-            <input id="haku" placeholder="Hae tuotetta">
-            <a id="kori" href="./ostoskori.html"><img src="../img/kori.jpg" alt="kori"></a>
-    </header>
+    <nav id="hakemisto">
+        <a id="logo" href="/index.html">
+            <img src="/img/logo.png">
+        </a>
 
-    <main>
-        <h1>Yhteydenotto</h1>
-    <form>
-        <label for="fname">Etunimi*</label><br>
-            <input type="text">
-        <br><br>
-        <label for="lname">Sukunimi*</label><br>
-            <input type="text">
-            <br><br>
-        <label for="email">Sähköposti*</label><br>
-            <input type="email">
-            <br><br>
-        <label for="email">Puhelinnumero</label><br>
-            <input type="number">
+        <hr>
 
-    </form>
-    </main>
-    <footer>
-        <p>Yhteydenotto</p>
-    </footer>
+        <a class="linkki" href="/html/liittymät.html">Liittymät</a>
+        <a class="linkki" href="/html/puhelimet.html">Puhelimet</a>
+        <a class="linkki" href="/html/tietokoneet.html">Tietokoneet</a>
+        <a class="linkki" href="/html/tietoa.html">Tietoa meistä</a>
+        <a class="linkki" href="/html/yhteydenotto.html">Yhteydenotto</a>
 
-<script src="..\js\yhteydenotto.js"></script>
+        <hr>
+
+        <a id="kori" href="/html/ostoskori.html">
+            <img src="/img/kori.jpg">
+        </a>
+
+        <hr>
+
+    </nav>
+<div id="footer"></div>
+
+<script src="/js/footer.js"></script>
 </body>
 </html>
