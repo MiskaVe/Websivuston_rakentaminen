@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <title>Miskan rakentama verkkosivu</title>
 </head>
@@ -88,15 +89,31 @@
 
 
     </main>
-<div id="footer"></div>
+<link rel="stylesheet" href="css/footer.css">
 
-<script>
-    fetch("html/footer.html")
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("footer").innerHTML = data;
-});
-</script>
+<footer>
+    <div class="footer-content">
+
+        <div class="footer-section">
+            <h3>Linkit</h3>
+            <a href="html/liittymät.html">Liittymät</a>
+            <a href="html/puhelimet.html">Puhelimet</a>
+            <a href="html/tietokoneet.html">Tietokoneet</a>
+            <a href="html/yhteydenotto.html">Yhteydenotto</a>
+        </div>
+
+        <div class="footer-section">
+            <h3>Yhteystiedot</h3>
+            <p>info@miskashop.fi</p>
+            <p>+358 40 123 4567</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © Miska Venäläinen
+    </div>
+</footer>
 
 <script>
     const hamburger = document.getElementById("hamburger");
