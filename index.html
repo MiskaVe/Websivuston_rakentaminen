@@ -90,7 +90,13 @@
     </main>
 <div id="footer"></div>
 
-<script src="js/footer.js"></script>
+<script>
+    fetch("html/footer.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("footer").innerHTML = data;
+});
+</script>
 
 <script>
     const hamburger = document.getElementById("hamburger");
