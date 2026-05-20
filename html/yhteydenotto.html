@@ -5,35 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/form.css">
 
     <title>Miskan rakentama verkkosivu</title>
 </head>
 
 <body>
-    <nav id="hakemisto">
-        <a id="logo" href="/index.html">
-            <img src="/img/logo.png">
-        </a>
+<nav id="hakemisto">
+    <a id="logo" href="/index.html">
+        <img src="/img/logo.png" alt="Miska logo">
+    </a>
 
-        <hr>
+    <div id="hamburger">☰</div>
 
+    <div id="menu">
         <a class="linkki" href="/html/liittymät.html">Liittymät</a>
         <a class="linkki" href="/html/puhelimet.html">Puhelimet</a>
         <a class="linkki" href="/html/tietokoneet.html">Tietokoneet</a>
-        <a class="linkki" href="/html/tietoa.html">Tietoa meistä</a>
         <a class="linkki" href="/html/yhteydenotto.html">Yhteydenotto</a>
+    </div>
 
-        <hr>
+    <a id="kori" href="/html/ostoskori.html">
+        <img src="/img/kori.jpg" alt="Ostoskori">
+    </a>
+</nav>
 
-        <a id="kori" href="/html/ostoskori.html">
-            <img src="/img/kori.jpg">
-        </a>
+<main class="contact-page">
+    <form class="contact-form">
+        <h1>Ota yhteyttä</h1>
+        <p>Lähetä meille viesti, niin vastaamme mahdollisimman pian.</p>
 
-        <hr>
+        <div class="form-row">
+            <input type="text" id="etunimi" name="etunimi" placeholder="Etunimi">
+            <input type="text" id="sukunimi" name="sukunimi" placeholder="Sukunimi">
+        </div>
 
-    </nav>
+        <input type="email" id="sahkoposti" name="sahkoposti" required placeholder="Sähköpostiosoite*">
+
+        <textarea id="palaute" name="palaute" required placeholder="Vapaa palaute..."></textarea>
+
+        <button type="submit">Lähetä viesti</button>
+    </form>
+</main>
+
 <div id="footer"></div>
 
 <script src="/js/footer.js"></script>
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
+
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+</script>
+
 </body>
 </html>

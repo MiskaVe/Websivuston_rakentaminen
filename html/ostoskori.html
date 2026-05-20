@@ -5,35 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/kori.css">
 
     <title>Miskan rakentama verkkosivu</title>
 </head>
 
 <body>
-    <nav id="hakemisto">
-        <a id="logo" href="/index.html">
-            <img src="/img/logo.png">
-        </a>
+<nav id="hakemisto">
+    <a id="logo" href="/index.html">
+        <img src="/img/logo.png" alt="Miska logo">
+    </a>
 
-        <hr>
+    <div id="hamburger">☰</div>
 
+    <div id="menu">
         <a class="linkki" href="/html/liittymät.html">Liittymät</a>
         <a class="linkki" href="/html/puhelimet.html">Puhelimet</a>
         <a class="linkki" href="/html/tietokoneet.html">Tietokoneet</a>
-        <a class="linkki" href="/html/tietoa.html">Tietoa meistä</a>
         <a class="linkki" href="/html/yhteydenotto.html">Yhteydenotto</a>
+    </div>
 
-        <hr>
+    <a id="kori" href="/html/ostoskori.html">
+        <img src="/img/kori.jpg" alt="Ostoskori">
+    </a>
+</nav>
 
-        <a id="kori" href="/html/ostoskori.html">
-            <img src="/img/kori.jpg">
-        </a>
+    <main class="cart-page">
+        <section class="cart-box">
+            <h1>Ostoskori</h1>
 
-        <hr>
+            <div class="cart-item">
+                <img src="/img/läppäri1.jpg" alt="Tuote">
+                <div>
+                    <h2>Läppäri 1</h2>
+                    <p>Määrä: 1</p>
+                    <p>Hinta: 799 €</p>
+                </div>
+            </div>
 
-    </nav>
+            <div class="cart-summary">
+                <p>Yhteensä: <strong>799 €</strong></p>
+                <button>Siirry kassalle</button>
+            </div>
+        </section>
+    </main>
+
+
 <div id="footer"></div>
 
 <script src="/js/footer.js"></script>
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
+
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+</script>
+
 </body>
 </html>

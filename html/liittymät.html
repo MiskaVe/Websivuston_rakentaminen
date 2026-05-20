@@ -10,30 +10,64 @@
 </head>
 
 <body>
-    <nav id="hakemisto">
-        <a id="logo" href="/index.html">
-            <img src="/img/logo.png">
-        </a>
+<nav id="hakemisto">
 
-        <hr>
+    <a id="logo" href="/index.html">
+        <img src="/img/logo.png">
+    </a>
 
+    <!-- Hamburger button -->
+    <div id="hamburger">
+        ☰
+    </div>
+
+    <!-- Menu items wrapper -->
+    <div id="menu">
         <a class="linkki" href="/html/liittymät.html">Liittymät</a>
         <a class="linkki" href="/html/puhelimet.html">Puhelimet</a>
         <a class="linkki" href="/html/tietokoneet.html">Tietokoneet</a>
-        <a class="linkki" href="/html/tietoa.html">Tietoa meistä</a>
         <a class="linkki" href="/html/yhteydenotto.html">Yhteydenotto</a>
+    </div>
 
-        <hr>
+    <a id="kori" href="/html/ostoskori.html">
+        <img src="/img/kori.jpg">
+    </a>
 
-        <a id="kori" href="/html/ostoskori.html">
-            <img src="/img/kori.jpg">
-        </a>
+</nav>
 
-        <hr>
 
-    </nav>
+    <main>
+        
+        <div id="tuotekuvasto">
+            <div class="tuote">
+                <img src="/img/liittymä1.jpg" alt="Tuote 7">
+                <p>Liittymä 5G</p>
+            </div>
+        
+            <div class="tuote">
+                <img src="/img/liittymä2.jpg" alt="Tuote 8">
+                <p>Liittymä 4G</p>
+            </div>
+        
+            <div class="tuote">
+                <img src="/img/liittymä3.jpg" alt="Tuote 9">
+                <p>Liittymä 3G</p>
+            </div>
+        </div>
+
+    </main>
 <div id="footer"></div>
 
 <script src="/js/footer.js"></script>
+
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
+
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+</script>
+
 </body>
 </html>
